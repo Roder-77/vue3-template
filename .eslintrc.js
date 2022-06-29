@@ -51,5 +51,10 @@ module.exports = {
     'sort-imports': 'off',
     'spaced-comment': ['warn', 'always'],
     'switch-colon-spacing': 'warn',
+    'vue/html-closing-bracket-newline': ['warn', {
+      singleline: 'never',
+      multiline: 'never',
+    }],
+    'vue/multi-word-component-names': 'off',
   },
 };
