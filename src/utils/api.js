@@ -30,7 +30,15 @@ export function uploadFile(uri, formData, progressCallback, headers) {
     };
   }
 
-  return axios.post(uri, formData, { headers, onUploadProgress });
+  const config = {
+    headers: {
+      'Content-Type': 'multipart/form-data',
+      ...headers,
+    },
+    onUploadProgress,
+  };
+
+  return axios.post(uri, formData, config);
 }
 
 export const apiPath = {
