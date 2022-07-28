@@ -6,6 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
+    "lint:fix": "vue-cli-service lint --fix",
     "dev": "webpack serve --progress --config ./webpack.config.js",
     "webpack build": "webpack --config ./webpack.config.js"
   },

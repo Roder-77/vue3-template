@@ -8,7 +8,7 @@ import customizePrototype from './utils/customizePrototype';
 const pinia = createPinia();
 
 createApp(App)
-  .use(pinia)
-  .use(router)
-  .use(customizePrototype)
-  .mount('#app');
+    .use(pinia)
+    .use(router)
+    .use(customizePrototype)
+    .mount('#app');

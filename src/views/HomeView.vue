@@ -1,10 +1,10 @@
 <template>
-  <div class="home">
-    <img
-      alt="Vue logo"
-      src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
+	<div class="home">
+		<img
+			alt="Vue logo"
+			src="../assets/logo.png">
+		<HelloWorld msg="Welcome to Your Vue.js App" />
+	</div>
 </template>
 
 <script setup>
@@ -17,9 +17,9 @@ const store = useStore();
 console.log(store.$state.test);
 
 onBeforeMount(() => {
-  callAPI(httpMethod.get, apiPath.member)
-    .then(rsp => {
-      console.log(rsp);
-    });
+    callAPI(httpMethod.get, apiPath.member)
+        .then(rsp => {
+            console.log(rsp);
+        });
 });
 </script>
