@@ -8,10 +8,19 @@ module.exports = {
     extends: [
         'plugin:vue/vue3-recommended',
         'eslint:recommended',
-        '@vue/airbnb',
     ],
     parserOptions: {
+        ecmaVersion: 'latest',
         parser: '@babel/eslint-parser',
+        requireConfigFile: false,
+        sourceType: 'module',
+    },
+    plugins: ['vue', 'import'],
+    globals: {
+        defineProps: 'readonly',
+        defineEmits: 'readonly',
+        defineExpose: 'readonly',
+        withDefaults: 'readonly',
     },
     rules: {
         'arrow-parens': ['warn', 'as-needed'],
@@ -54,7 +63,7 @@ module.exports = {
         'switch-colon-spacing': 'warn',
         // vue rules
         'vue/html-closing-bracket-newline': ['warn', { singleline: 'never', multiline: 'never' }],
-        'vue/html-indent': ['warn', 'tab', {
+        'vue/html-indent': ['warn', 4, {
             attribute: 1,
             baseIndent: 1,
             closeBracket: 0,

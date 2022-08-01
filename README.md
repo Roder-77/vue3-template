@@ -1,8 +1,11 @@
-# vue3-template + pinia
+# Vue 3 + Vite + Pinia + Eslint
+
+This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+
+### Recommended IDE Setup
+
+- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
 
 ### The official recommendation is to use pinia for new application
-See more information in [vue3 document #pinia](https://vuejs.org/guide/scaling-up/state-management.html#pinia). \
-[pinia official website](https://pinia.vuejs.org/)
 
-### The official recommendation is to use volar in vscode 
-See more information in [vue3 document #ide-support](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+- [pinia](https://pinia.vuejs.org/)
