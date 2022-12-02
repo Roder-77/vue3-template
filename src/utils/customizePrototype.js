@@ -1,6 +1,3 @@
-/* eslint-disable func-names */
-/* eslint-disable no-extend-native */
-
 import dateHelper from '@/utils/date';
 
 function initDate() {

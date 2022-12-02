@@ -1,10 +1,10 @@
 <script setup>
-import { ref } from 'vue';
+import { ref } from "vue";
 
 defineProps({
     msg: {
         type: String,
-        default: '',
+        default: "",
     },
 });
 
@@ -12,7 +12,17 @@ const count = ref(0);
 </script>
 
 <template>
-    <h1>{{ msg }}</h1>
+    <h1 class="ml-1">
+        {{ msg }}
+        <svg-icon name="line" />
+    </h1>
+    <b-container class="bv-example-row">
+        <b-row>
+            <b-col>1 of 3</b-col>
+            <b-col>2 of 3</b-col>
+            <b-col>3 of 3</b-col>
+        </b-row>
+    </b-container>
 
     <div class="card">
         <button
@@ -28,15 +38,12 @@ const count = ref(0);
 
     <p>
         Check out
-        <a
-            href="https://vuejs.org/guide/quick-start.html#local"
-            target="_blank">create-vue</a>, the official Vue + Vite starter
+        <a href="https://vuejs.org/guide/quick-start.html#local">create-vue</a>, the official Vue +
+        Vite starter
     </p>
     <p>
         Install
-        <a
-            href="https://github.com/johnsoncodehk/volar"
-            target="_blank">Volar</a>
+        <a href="https://github.com/johnsoncodehk/volar">Volar</a>
         in your IDE for a better DX
     </p>
     <p class="read-the-docs">
@@ -44,8 +51,8 @@ const count = ref(0);
     </p>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .read-the-docs {
-  color: #888;
+    color: $primary-color;
 }
 </style>

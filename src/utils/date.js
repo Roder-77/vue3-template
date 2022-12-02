@@ -22,7 +22,6 @@ export default {
             format = format.replace(matchYear, year);
         }
 
-        // eslint-disable-next-line no-restricted-syntax
         for (const [key, value] of Object.entries(data)) {
             const regExp = new RegExp(key, 'g');
             const matchArray = format.match(regExp);

@@ -67,9 +67,10 @@ module.exports = {
             attribute: 1,
             baseIndent: 1,
             closeBracket: 0,
-            alignAttributesVertically: true,
+            alignAttributesVertically: false,
             ignores: [],
         }],
         'vue/multi-word-component-names': 'off',
+        'vue/max-attributes-per-line': 'off',
     },
 };

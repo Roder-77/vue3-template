@@ -1,12 +1,7 @@
 <template>
     <div class="home">
-        <a
-            href="https://vitejs.dev"
-            target="_blank">
-            <img
-                src="/vite.svg"
-                class="logo"
-                alt="Vite logo">
+        <a href="https://vitejs.dev" target="_blank">
+            <img src="/vite.svg" class="logo" alt="Vite logo">
         </a>
         <a
             href="https://vuejs.org/"
@@ -17,24 +12,34 @@
                 alt="Vue logo">
         </a>
         <HelloWorld msg="Welcome to Your Vue.js App" />
+        <TestPage
+            foo="hi"
+            @user-name="userName" />
     </div>
 </template>
 
 <script setup>
 import { onBeforeMount } from 'vue';
 import HelloWorld from '@/components/HelloWorld.vue';
+import TestPage from '@/components/Test.vue';
 import useStore from '@/store/main';
 import { apiPath, callAPI, httpMethod } from '@/utils/api';
 
 const store = useStore();
-console.log(store.$state.test);
+console.log(store.test);
 
+store.loading;
+setTimeout(() => store.loading(), 2000);
 onBeforeMount(() => {
     callAPI(httpMethod.get, apiPath.member)
         .then(rsp => {
             console.log(rsp);
         });
 });
+
+const userName = value => {
+    console.log('hihi:'+value);
+};
 </script>
 
 <style scoped>
