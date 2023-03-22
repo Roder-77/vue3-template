@@ -33,7 +33,7 @@ module.exports = {
         'import/newline-after-import': 'warn',
         'import/no-duplicates': 'error',
         'import/order': 'warn',
-        indent: ['warn', 4],
+        indent: ['warn', 4, { "SwitchCase": 1 }],
         'key-spacing': 'warn',
         'linebreak-style': ['warn', 'unix'],
         // 'newline-after-var': 'warn',
