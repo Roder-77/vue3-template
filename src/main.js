@@ -6,7 +6,8 @@ import App from './App.vue';
 import router from './router';
 import './style.css';
 
-import customizePrototype from './utils/customizePrototype';
+import customizePrototype from './plugins/customizePrototype';
+import globalListener from './plugins/globalListener';
 
 // bootstrap
 import 'bootstrap/dist/css/bootstrap.css';
@@ -23,5 +24,6 @@ createApp(App)
     .use(pinia)
     .use(router)
     .use(customizePrototype)
+    .use(globalListener)
     .component('svg-icon', svgIcon)
     .mount('#app');
