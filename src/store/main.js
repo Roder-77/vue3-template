@@ -1,10 +1,11 @@
 import { defineStore } from 'pinia';
-import loading from '@/utils/loading';
+import { useLoading, useToast } from '@/utils/globalComponent';
 
 export default defineStore('main', {
     state: () => ({
         test: '123',
-        loading: loading(),
+        loading: useLoading(),
+        toast: useToast(),
     }),
     getters: {
     },

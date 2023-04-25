@@ -28,8 +28,10 @@ import { apiPath, callAPI, httpMethod } from '@/utils/api';
 const store = useStore();
 console.log(store.test);
 
-store.loading;
-setTimeout(() => store.loading(), 2000);
+store.loading.show();
+setTimeout(() => store.loading.hide(), 2000);
+store.toast.show('test');
+
 onBeforeMount(() => {
     callAPI(httpMethod.get, apiPath.member)
         .then(rsp => {

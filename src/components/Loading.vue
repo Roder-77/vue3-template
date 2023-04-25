@@ -14,7 +14,7 @@ defineExpose({
 
 <template>
     <Transition name="fade" mode="out-in">
-        <div class="text-center transparent-background">
+        <div v-if="isLoading" class="text-center transparent-background">
             <b-spinner />
         </div>
     </Transition>
