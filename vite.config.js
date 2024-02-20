@@ -36,7 +36,7 @@ export default defineConfig({
     server: {
         host: '0.0.0.0',
         proxy: {
-            '/api': {
+            '^/api': {
                 target: 'https://localhost:44326/api', // https://{Domain}/api
                 changeOrigin: true,
                 secure: false,

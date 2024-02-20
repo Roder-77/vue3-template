@@ -1,6 +1,12 @@
 import common from '@/utils/common';
 
 export default {
+    /**
+     * 格式化日期
+     * @param {Date} date 當前日期
+     * @param {string} format 通用格式
+     * @returns 格式化後的日期
+     */
     formatDate(date, format = 'yyyy/MM/dd HH:mm:ss') {
         const data = {
             'M+': common.padZero(date.getMonth() + 1, 2),
